@@ -1,6 +1,15 @@
 #include <iostream>
 
+int swap(int * a, int * b){
+    int val1 = *a;
+    int val2 = *b;
 
+    *a = val2;
+    *b = val1;
+    
+    return 0;
+}
+    
 int main() {
     int arr[] = { 432, 342, 34, 234, 3, 213, 367, 847, 763 };
     int i, j, fsw, ssw;
@@ -15,10 +24,7 @@ int main() {
     for( j = 0; n > j; j++) {
         for(i = 0; n > i; i++) {
             if (arr[i] > arr[i + 1]) {
-                fsw = arr[i];
-                ssw = arr[i + 1];
-                arr[i] = ssw;
-                arr[i + 1] = fsw; 
+                swap(&arr[i], &arr[i + 1]); 
             }
         }
     }

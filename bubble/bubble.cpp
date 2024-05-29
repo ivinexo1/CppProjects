@@ -14,7 +14,7 @@ int swap(int * a, int * b){
     
 int main() {
     int arr[] = { 432, 342, 34, 234, 3, 213, 367, 847, 763 };
-    int i, j, fsw, ssw;
+    int i, j;
     int n = sizeof(arr) / sizeof(arr[0]);
 
     for(i = 0; i < n; i++) {

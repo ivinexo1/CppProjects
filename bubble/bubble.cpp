@@ -9,7 +9,8 @@ int main() {
     int i, j;
     int n = sizeof(arr) / sizeof(arr[0]);
     int * pEnd = &arr[sizeof(arr) / sizeof(arr[0])];
-
+    
+//    array.numInput(&arr[0], pEnd);
 //    std::cout << sizeof(arr) / sizeof(arr[0]) << " " << pEnd << std::endl;
 //    array.numPrint(&arr[0], 
 //    for(i = 0; i < n; i++) {

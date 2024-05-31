@@ -10,6 +10,8 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     int * pEnd = &arr[sizeof(arr) / sizeof(arr[0])];
     
+    array.numInput(&arr[0], pEnd);
+    std::cout << n << " " << &arr[n] - &arr[0] << std::endl;
 //    array.numInput(&arr[0], pEnd);
 //    std::cout << sizeof(arr) / sizeof(arr[0]) << " " << pEnd << std::endl;
 //    array.numPrint(&arr[0], 

@@ -5,12 +5,12 @@
     
 int main() {
     array array;
-    int arr[] = {815, 53, 591, 771, 79, 329, 33, 295, 936, 374};   
+    char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};   
     int i, j;
     int n = sizeof(arr) / sizeof(arr[0]);
-    int * pEnd = &arr[sizeof(arr) / sizeof(arr[0])];
+    char * pEnd = &arr[sizeof(arr) / sizeof(arr[0])];
     
-    array.numInput(&arr[0], pEnd);
+//    array.charInput(&arr[0], pEnd);
     std::cout << n << " " << &arr[n] - &arr[0] << std::endl;
 //    array.numInput(&arr[0], pEnd);
 //    std::cout << sizeof(arr) / sizeof(arr[0]) << " " << pEnd << std::endl;
@@ -18,18 +18,18 @@ int main() {
 //    for(i = 0; i < n; i++) {
 //        std::cout << arr[i] << " ";
 //    }
- //   std::cout << std::endl;
-    array.numPrint(&arr[0], pEnd);
-    std::cout << n << std::endl;    
+//   std::cout << std::endl;
+    array.charPrint(&arr[0], pEnd);
+    std::cout << n << std::endl;
     for( j = 0; n > j; j++) {
         for(i = 0; n > i; i++) {
             if (arr[i] > arr[i + 1]) {
-                array.swap(&arr[i], &arr[i + 1]); 
+                array.charSwap(&arr[i], &arr[i + 1]);
             }
         }
     }
 
-    array.numPrint(&arr[0], pEnd);
+    array.charPrint(&arr[0], pEnd);
 //    for(i = 0; n > i; i++) {
 //        std::cout << arr[i] << " ";
 //    }

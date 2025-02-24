@@ -1,16 +1,18 @@
 #include <iostream>
+#include "/home/ivinexo/CppProjects/math/math.cpp"
 
 int main() {
-    double y = 10;
+    math math;
+    double y = 20;
     double x;
 
-    for( ; y >= -10; y = y - 0.5){
+    for( ; y >= -20; y--){
 //        std::cout << " " <<  y << " ";
-        for ( x = -10; x <= 10; x = x + 0.5) {
-            if( (0.5 * x) == y){
+        for ( x = -20; x <= 20; x++) {
+            if( math.intExp(2, x) == y){
                 std::cout << " # ";
-            } else if ((3 * (x+2)) == y){
-                std::cout << " # ";
+//            } else if (((3+x) * (x+2)) == y){
+//                std::cout << " & ";
             }else {
                 std::cout << " . ";
             }

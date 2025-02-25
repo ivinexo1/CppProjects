@@ -1,10 +1,13 @@
 #include <iostream>
+#include "../math/math.cpp"
 
 using namespace std;
 
 int main() {
+    math math;
+
     char comm;
-    int a, b, c;
+    double a, b, c;
 
     cout << "num 1, command, num 2 \n";
     cin >> a >> comm >> b;
@@ -26,6 +29,13 @@ int main() {
             case '^':
                 for(int i = 0; i < b; i++) a = a * a;
                 break;
+            case 's':
+                c = math.doSqrt(a);
+                break;
+            case 'c':
+                c = math.doCube(a);
+                break;
+
         }
 
         cout << "\n" << c << endl;

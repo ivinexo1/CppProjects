@@ -15,9 +15,9 @@ class math {
         }
         return i--;
     }
-    double doSqrt(double x){
+    double doSqrt(double x, int y){
         double out = (1 + x/1)/2;
-        for(int i = 0; i <= 10000000; i++){
+        for(int i = 0; i <= y; i++){
             out = (out + (x / out)) / 2;
         }
 
@@ -25,18 +25,33 @@ class math {
     }
     int intCube(int x) {
         int i = 1;
-        while(i * i * i <= x) {
-            i++;
+        if( x > 0) {
+            while(i * i * i <= x) {
+                i++;
+            }
+            return i--;
+        } else {
+            while((i * i * i) >= x) {
+                i--;
+            }
+            return i++;
         }
-        return i--;
 
     }
-    double doCube(int x) {
-        double out = 1;
+    double doCube(double x, int y) {
+        double out = ((x / 1) + 2) / 3;
 
-        for(int i = 1; i <= 100; i++){
-            out = ((x / out) + (2 * out)) / 3;
+        for(int i = 1; i <= y; i++){
+            out = ((x / (out * out)) + (2 * out)) / 3;
         }
         return out;
     }
+    double doForth(int x){
+        double out = 1;
+        for(int i = 1; i <= 1000000; i++) {
+            out = ((x /(out * out * out)) / (3 * x)) / 3;
+        }
+        return out;
+    }
+
 };

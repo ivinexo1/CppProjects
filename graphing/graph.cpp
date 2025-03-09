@@ -14,7 +14,7 @@ int main() {
     int shiftu;
     std::cin >> shifts >> shiftu >> zoom;
     
-    std::cout << "   ";
+    std::cout << "   "; 
     
     for(x = (-26 + shifts) * zoom; x <= (26 + shifts)  * zoom; x++) {
         if(x <= 0) {
@@ -49,7 +49,7 @@ int main() {
         }
 //        std::cout << " " <<  y << " ";
         for(x = (-26 + shifts) * zoom; x <= (26 + shifts) * zoom; x = x + zoom) {
-            if(math.doSqrt(x, 1000000) == y){
+            if(math.intExp(x, 2) == y){
                 std::cout << " # ";
 //            } else if (math.intExp(2,x) == y){
 //                std::cout << " & ";

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "/home/ivinexo/CppProjects/math/math.cpp"
+#include "../calculus/operator.cpp"
 
 int main() {
     math math;

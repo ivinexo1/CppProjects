@@ -13,10 +13,17 @@ public:
         }
 
         return 0;
-    } 
+    }
+    void charInput(char* beg, char* end){
+        std::cin >> std::setw(end - beg);
+        for (char* i = beg; i < end; i++){
+            std::cin >> *i;
+        }
+        return;
+    }
     void charPrint(char * beg, char * end){
         for(char * i = beg; i < end; i++) {
-            std::cout << *i << " ";
+            std::cout << *i;
         }
         std::cout << std::endl;
 

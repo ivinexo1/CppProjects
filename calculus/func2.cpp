@@ -1,3 +1,3 @@
 #include <cmath>
 
-double func2(double x){ return -100000000;}
+double func2(double x){ return -(x*x);}

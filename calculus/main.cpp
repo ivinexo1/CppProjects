@@ -18,6 +18,6 @@ int main(){
 		std::cout << c[i] << "\n";
 	}
 	ope Ope;
-	std::cout << Ope.integ(-1000, 1000, 10000, &func) << std::endl;
+	std::cout << Ope.dinteg(0, 1, &func2, &func, &funcxy, 10000) << std::endl;
 	return 0;
 }

@@ -6,16 +6,15 @@ public:
 //    void charInput
 
     int numInput(int * beg, int * end){
-        g = beg;
-        std::cin >> std::setw(end - beg); 
-        for( ;g < end; g++){
+//        std::cin >> std::setw(end - beg); 
+        for(int* g = beg ;g < end; g++){
             std::cin >> *g;
         }
 
         return 0;
     }
     void charInput(char* beg, char* end){
-        std::cin >> std::setw(end - beg);
+//        std::cin >> std::setw(end - beg);
         for (char* i = beg; i < end; i++){
             std::cin >> *i;
         }
@@ -55,6 +54,37 @@ public:
         *a = char2;
         *b = char1;
         
+        return;
+    }
+    void charEncrypt(char* beg, char* end, char* beg2, char* end2){
+        char* passpoint = beg2;
+        for(char* i = beg; i < end; i++){
+            if(passpoint >= end2){
+                passpoint = beg2;
+            }
+            *i = char(int(*i) + int(*passpoint));
+            passpoint++;
+        }
+        return;
+    }
+    void intDecrypt(int* beg, int* end, char* beg2, char* end2){
+        char* passpoint = beg2;
+        for(int* i = beg; i < end; i++){
+            if(passpoint >= end2){
+                passpoint = beg2;
+            }
+            *i = *i - int(*passpoint);
+            passpoint++;
+        }
+        return;
+    }
+    void intToChar(int* ibeg, int* iend, char* cbeg, char* cend){
+        char* ci = cbeg;
+//        std::cout << iend - ibeg << " " << cend - cbeg;
+        for(int* i = ibeg; i < iend; i++){
+            *ci = char(*i);
+            ci++;
+        }
         return;
     }
 

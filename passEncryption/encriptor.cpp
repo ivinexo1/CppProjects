@@ -13,25 +13,25 @@ int main() {
     std::cout << "File name: ";
     Array.charInput(&name[0], &name[c]);
     name[c] = '\0';
+
     std::cout << "lenght of massage: ";
     std::cin >> a;
     char string[a];
-//    ifstream infile("file"); 
     std::cout << "Massage: ";
     Array.charInput(&string[0],&string[a]);
-//    infile.close();
+
     std::cout << "Lenght of password: ";
     std::cin >> b;
     char pass[b];
     std::cout << "Password: ";
     Array.charInput(&pass[0], &pass[b]);
-//    Array.charPrint(&string[0], &string[a]);
+
     Array.charEncrypt(&string[0], &string[a], &pass[0], &pass[b]);
     int arr[a];
     for(int i = 0; i < a; i++){
         arr[i] = string[i];
     }
- //   std::cout << "\n" << int(string[5]) << " " << arr[5]<< std::endl;
+
     Array.numPrint(&arr[0], &arr[a]);
     
     Array.charPrint(&name[0], &name[c]);

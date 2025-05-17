@@ -4,20 +4,19 @@
 
 int main() {
     array Array;
-    int a = 1215;
-    int b;
-    int c;
+    int a, b, c;
 
 
     
     std::cout << "lenght of name: ";
     std::cin >> c;
     char name[c+1];
-    int string[a];
-
     std::cout << "file: ";
     Array.charInput(&name[0],&name[c]);
     name[c] = '\0';
+    std::cout << "Lenght of message: ";
+    std::cin >> a;
+    int string[a+1];
 //    for(int i = 0; i < 997; i++){
 //        std::cin >> string[i];
 //    }

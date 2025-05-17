@@ -47,9 +47,13 @@ int main() {
 //    for(int i = 0; i < a; i++){
 //        arr[i] = char(string[i]);
 //    }
-
+    char outname[c+2];
+    for(int i = 1; i <= (c+1); i++){
+        outname[i] = name[i-1];
+    }
+    outname[0] = 'o';
     Array.charPrint(&arr[0], &arr[a]);
-    std::ofstream outfile(name);
+    std::ofstream outfile(outname);
     if (!outfile.is_open()) {
         std::cerr << "Failed to open file for writing.\n";
         return 1;

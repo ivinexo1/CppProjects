@@ -17,8 +17,18 @@ int main() {
     std::cout << "lenght of massage: ";
     std::cin >> a;
     char string[a];
-    std::cout << "Massage: ";
-    Array.charInput(&string[0],&string[a]);
+//    std::cout << "Massage: ";
+//    Array.charInput(&string[0],&string[a]);
+
+    std::ifstream infile(name);
+
+    // Reading the array elements from the file
+    for (int i = 0; i < a; ++i) {
+        infile >> string[i];
+    }
+
+    // Closing the file
+    infile.close();    
 
     std::cout << "Lenght of password: ";
     std::cin >> b;

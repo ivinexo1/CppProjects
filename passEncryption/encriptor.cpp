@@ -38,9 +38,10 @@ int main() {
 
     Array.charEncrypt(&string[0], &string[a], &pass[0], &pass[b]);
     int arr[a];
-    for(int i = 0; i < a; i++){
-        arr[i] = string[i];
-    }
+    Array.charToInt(&string[0], &string[a], &arr[0], &arr[a]);
+//    for(int i = 0; i < a; i++){
+//        arr[i] = string[i];
+//    }
 
     Array.numPrint(&arr[0], &arr[a]);
     

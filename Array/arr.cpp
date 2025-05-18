@@ -87,6 +87,14 @@ public:
         }
         return;
     }
+    void charToInt(char* beg, char* end, int* beg2, int* end2){
+        int* convertpoint = beg2;
+        for(char* i = beg; i < end; i++){
+            *convertpoint = *i;
+            convertpoint++;
+        }
+        return;
+    }
 
 private:
     char char1, char2;

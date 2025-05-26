@@ -1,11 +1,11 @@
 #include <iostream>
-#include "/home/ivinexo/lib/c++/arr/arr.cpp"
+#include "../Array/arr.cpp"
 
 
     
 int main() {
     array array;
-    char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};   
+    char arr[] = {'b', 'a', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};   
     int i, j;
     int n = sizeof(arr) / sizeof(arr[0]);
     char * pEnd = &arr[sizeof(arr) / sizeof(arr[0])];

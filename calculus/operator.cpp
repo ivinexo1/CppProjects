@@ -26,16 +26,22 @@ class ope {
 		double dx = (b-a)/t;
 		double out = 0;
 		double dy;
-		for(int i = 0; i < 100; i++){ std::cout << "-";}
-		std::cout << "|" << std::endl;
 		for(int i = 0; i <= t; i++){
 			dy = (l(a+(i*dx)) - c(a+(i*dx)))/t;
 			for(int j = 0; j < t; j++){
 				out = out + f(a+(i*dx), c(a+(i*dx)) + (j*dy))*dy*dx;
 			}
-			if(i%int(t/100) == 10){
-				std::cout << "#" << std::flush;
-			}
+            std::cout << "\r[";
+            for(int k = 0; k < 100; k++){
+                if(k < int(i/100)){
+                    std::cout << "=";
+                }else if(k == int(i/100)){
+                    std::cout << ">";
+                }else{
+                    std::cout << "-";
+                }
+            }
+            std::cout << "]" << std::flush;
 		}
 		std::cout << std::endl;
 		return out;

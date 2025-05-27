@@ -14,7 +14,7 @@ public:
 MyWindow::MyWindow()
 {
   Gtk::Fixed fixed;
-  auto label = Gtk::make_managed<Gtk::Label>("cool button");
+  auto label = Gtk::make_managed<Gtk::Label>("");
  /* Set some window properties */
   set_title("Frame Example");
   set_size_request(300, 300);

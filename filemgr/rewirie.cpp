@@ -2,21 +2,32 @@
 #include <fstream>
 #include <sstream>
 
-int main() {
+int main(int argc, const char* argv[]) {
     // Create a text string, which is used to output the text file
-    std::string myText;
+    std::string fname = argv[1];
+    std::string file;
+    std::string replace;
+    std::string replacment;
+
+    std::cout << "Enter string to replace: ";
+    std::cin >> replace;
+    std::cout << "Enter replacment: ";
+    std::cin >> replacment;
 
     // Read from the text file
-    std::ifstream MyReadFile("hello");
+    std::ifstream MyReadFile(fname);
     std::stringstream buffer;
     buffer << MyReadFile.rdbuf();
     MyReadFile.close(); 
-    myText = buffer.str();
+    file = buffer.str();
 
-    std::size_t pos = myText.find("Hello");
-    if (pos != std::string::npos)
-        myText.replace(pos, 5, "Python");
+    std::size_t pos = file.find(replace);
+    if (pos != std::string::npos){
+        file.replace(pos, replace.length(), replacment);
+    }
 
-    std::cout << myText;
+    std::ofstream Write(fname);
+    Write << file;
+    Write.close();
     return 0;
 }

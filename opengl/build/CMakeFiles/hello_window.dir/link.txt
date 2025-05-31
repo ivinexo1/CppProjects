@@ -1,0 +1,1 @@
+/sbin/c++ -Wl,--dependency-file=CMakeFiles/hello_window.dir/link.d CMakeFiles/hello_window.dir/src/main.cpp.o -o hello_window  -lglfw

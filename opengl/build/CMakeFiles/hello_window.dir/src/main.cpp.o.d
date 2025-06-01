@@ -146,8 +146,9 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/c++/15.1.1/bits/basic_ios.tcc \
  /usr/include/c++/15.1.1/bits/ostream.tcc /usr/include/c++/15.1.1/istream \
  /usr/include/c++/15.1.1/bits/istream.tcc \
- /home/ivinexo/CppProjects/opengl/dependencies/GLFW/glfw3.h \
+ /home/ivinexo/CppProjects/opengl/dependencies/glad/glad.h \
+ /home/ivinexo/CppProjects/opengl/dependencies/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/GL/gl.h \
- /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h
+ /usr/include/bits/stdint-least.h \
+ /home/ivinexo/CppProjects/opengl/dependencies/GLFW/glfw3.h

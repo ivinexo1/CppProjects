@@ -1,20 +1,20 @@
 #include <gtkmm.h>
-//#include <iostream>
-//#include <sstream>
-//#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <fstream>
 
 class MyWindow : public Gtk::Window
 {
 public:
-//  Gtk::ToggleButton m_Button;
+  Gtk::ToggleButton m_Button;
   MyWindow();
-//  void on_button_clicked(std::string, std::string, std::string);
-//  bool if_in_file(std::string, std::string);
+  void on_button_clicked(std::string, std::string, std::string);
+  bool if_in_file(std::string, std::string);
 };
 
 MyWindow::MyWindow()
 {
-/*  Gtk::Fixed fixed;
+  Gtk::Fixed fixed;
   set_title("Frame Example");
   set_size_request(300, 300);
 
@@ -26,8 +26,8 @@ MyWindow::MyWindow()
   m_Button.signal_clicked().connect( sigc::bind( sigc::mem_fun(*this, &MyWindow::on_button_clicked), "hello", "true", "false"));
 
    set_child(fixed);
-*/}
-/*
+}
+
 bool MyWindow::if_in_file(std::string fname, std::string string){
     std::string file;
 
@@ -70,7 +70,7 @@ void MyWindow::on_button_clicked(std::string fname, std::string string, std::str
     std::cout << file;
     return;
 }
-*/
+
 int main(int argc, char* argv[])
 {
   auto app = Gtk::Application::create("org.gtkmm.examples.base");
